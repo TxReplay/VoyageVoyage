@@ -7,7 +7,48 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <header>
+            <h1>
+                <a href="#">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Logo&w=140&h=60" alt="Logo">
+                </a>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+            </nav>
+
+            <ul class="social">
+                <li>
+                    <a href="#"><img src="" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="" alt=""></a>
+                </li>
+            </ul>
+
+            <ul id="user">
+                <li>
+                    <a href="#"><img src="" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="" alt=""></a>
+                </li>
+            </ul>
+        </header>
         {% block body %}{% endblock %}
+
+        <footer>
+
+        </footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
