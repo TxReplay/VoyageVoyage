@@ -20,7 +20,7 @@ h3 {
 }
 
 .btn {
-    background-color: #ffa291;
+    background-color: transparent;
     color: white;
     padding: 10px 30px;
     border-radius: 20px;
@@ -29,9 +29,9 @@ h3 {
     transition: background 0.4s ease-in-out;
 }
 
-.btn:hover {
-    background-color: transparent;
-    border: 1px solid #ffa291;
+.hvr-sweep-to-left:before, .hvr-sweep-to-right:before, .hvr-fade:hover {
+    background: #ffa291;
+    border-radius: 20px;
 }
 
 .border {
@@ -60,7 +60,7 @@ h1 { display: inline-block; }
 nav {
     display: inline-block;
     float: right;
-    margin: 25px 40px 0 0;
+    margin: 15px 40px 0 0;
 }
 
 nav li {
@@ -79,13 +79,17 @@ nav li a {
     transition: border 0.4s ease-in-out;
 }
 
-nav li a:hover {
-    border-bottom: 1px solid white;
+.hvr-underline-from-left:before {
+    background: white;
+    height: 2px;
+}
+
+nav li a.lang {
+    font-size: 10px;
 }
 
 nav li a.btn {
     margin-left: 50px;
-    border: none;
 }
 
 /* COVER */
@@ -172,8 +176,23 @@ nav li a.btn {
     left: 0; right: 0;
  }
 
+.most-visited .gallery img {
+    transition: 0.5s ease-in-out;
+}
+
 .most-visited .gallery li:hover p {
     display: block;
+}
+
+.most-visited .gallery li:hover img {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.most-visited .gallery img {
+    border: 10px solid white;
+    box-sizing: border-box;
+    width: 250px;
 }
 
 /* People */
@@ -187,6 +206,15 @@ nav li a.btn {
     display: inline-block;
     width: 20%;
     margin: 0 10px;
+}
+
+.hvr-glow {
+    border-radius: 100%;
+}
+
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
 }
 
 .people .name {
