@@ -9,7 +9,7 @@ a {
     color: white;
 }
 
-h3 {
+h2, h3 {
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -60,13 +60,13 @@ h3 {
 /* HEADER */
 
 header {
-    background: url('../images/bg-header.jpg') 50% 50%;
+    background: url('../images/bg-header.jpg') 50% 50% fixed;
     background-size: cover;
 }
 
 .sub-header {
     background-color: rgba(255, 255, 255, 0.2);
-    height: 70px;
+    height: 100%;
 }
 
 h1 { display: inline-block; }
@@ -79,12 +79,12 @@ h1 { display: inline-block; }
 nav {
     display: inline-block;
     float: right;
-    margin: 15px 40px 0 0;
+    margin: 10px 40px 0 0;
 }
 
 nav li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 nav li a {
@@ -98,6 +98,10 @@ nav li a {
     transition: border 0.4s ease-in-out;
 }
 
+nav li .lang {
+    font-size: 10px;
+}
+
 @media screen and (max-width: 820px) {
     header {
         text-align: center;
@@ -105,7 +109,7 @@ nav li a {
 
     nav {
         float: none;
-        margin: 0;
+        margin: 10px;
     }
 }
 
@@ -122,7 +126,7 @@ nav li a {
     color: white;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 150px 10px;
+    margin: 100px 10px;
 }
 
 .cover p {
@@ -239,7 +243,7 @@ nav li a {
 /* Sign In */
 
 .sign-in {
-    background: url('../images/bg-footer.png') 50% 50%;
+    background: url('../images/bg-footer.png') 50% 50% fixed;
     background-size: cover;
     text-align: center;
 }
