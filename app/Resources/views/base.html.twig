@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+            <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,600,700' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header>
+            <div class="sub-header">
+                <h1>
+                    <a href="{{ path('homepage') }}" class="header-logo">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                    </a>
+                </h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="{{ path('homepage') }}" class="hvr-underline-from-left">Accueil</a></li>
+                        <li><a href="{{ path('homepage') }}" class="hvr-underline-from-left">Présentation</a></li>
+                        <li><a href="{{ path('homepage') }}" class="hvr-underline-from-left">Voyager</a></li>
+                        <li><a href="{{ path('homepage') }}" class="hvr-underline-from-left">Faire visiter</a></li>
+                        <li><a href="{{ path('homepage') }}" class="btn connexion hvr-fade hvr-buzz-out">Connexion</a></li>
+                        <li><a href="{{ path('homepage') }}" class="lang hvr-icon-hang">FR </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="cover">
+                <h2>Commencez votre voyage</h2>
+                <p>Trouvez un guide dans la ville que vous souhaitez visiter ou publiez un voyage pour être contacté</p>
+                <a href="{{ path('homepage') }}" class="btn hvr-wobble-vertical hvr-fade">Publier un voyage</a>
+                <a href="{{ path('homepage') }}" class="btn hvr-wobble-vertical hvr-fade">Trouver un guide</a>
+            </div>
+        </header>
+        {% block body %}{% endblock %}
+
+        <footer>
+
+        </footer>
+
+        {% block javascripts %}
+            <script>
+                if ( window.addEventListener ) {
+                    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+                    window.addEventListener("keydown", function(e){
+                        kkeys.push( e.keyCode );
+                        if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+                            var audio = new Audio('{{ asset('music/voyage-voyage.mp3') }}');
+                            audio.play();
+                        }
+                    }, true);
+                }
+            </script>
+        {% endblock %}
+    </body>
+</html>

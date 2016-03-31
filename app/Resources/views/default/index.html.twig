@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="content">
+        <div class="how-it-works">
+            <div class="border"></div>
+
+            <div class="container">
+                <h3>Comment ça marche ?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+
+            <div class="border"></div>
+        </div>
+
+        <div class="most-visited">
+            <div class="container">
+                <h3>Les plus visités</h3>
+                <ul class="gallery">
+                    <li>
+                        <a href="#" class="hvr-grow-rotate">
+                            <img src="{{ asset('images/seville.png') }}" alt="Visiter Séville">
+                            <p>Séville</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hvr-grow-rotate">
+                            <img src="{{ asset('images/rome.png') }}" alt="Visiter Rome">
+                            <p>Rome</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hvr-grow-rotate">
+                            <img src="{{ asset('images/sanfransisco.png') }}" alt="Visiter San Fransisco">
+                            <p>San Fransisco</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hvr-grow-rotate">
+                            <img src="{{ asset('images/paris.png') }}" alt="Visiter Paris">
+                            <p>Paris</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="waiting-for-you">
+            <div class="border"></div>
+            <div class="container">
+                <h3>Ils vous attendent !</h3>
+
+                <ul class="people">
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('images/valentin.png') }}" class="hvr-glow" alt="Photo de Valentin">
+                            <p class="name">Valentin C.</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                               Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('images/manu.png') }}" class="hvr-glow" alt="Photo d'Emmanuel">
+                            <p class="name">Emmanuel G.</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                               Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('images/toni.png') }}" class="hvr-glow" alt="Photo de Toni">
+                            <p class="name">Toni O.</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                               Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('images/alex.png') }}" class="hvr-glow" alt="Photo d'Alexandra">
+                            <p class="name">Alexandra C.</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                               Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sign-in">
+            <div class="container">
+                <h3>Inscrivez-vous !</h3>
+                <p>L’inscription ne vous prendra pas plus de 30 secondes et vous permettra d’aller jusqu’au bout du monde !</p>
+                <a href="#" class="btn hvr-wobble-vertical hvr-fade">Inscription</a>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
